@@ -2,6 +2,7 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
 import { PanelLeft } from "lucide-react"
+import { useCookieConsent } from "@/contexts/CookieConsentContext"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -81,8 +82,11 @@ const SidebarProvider = React.forwardRef<
           _setOpen(openState)
         }
 
-        // This sets the cookie to keep the sidebar state.
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}; SameSite=Strict; Secure`
+        // Only set the cookie if we have consent
+        const { consent } = useCookieConsent();
+        if (consent) {
+          document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}; SameSite=Strict; Secure`;
+        }
       },
       [setOpenProp, open]
     )

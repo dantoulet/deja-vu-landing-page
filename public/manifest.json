@@ -1,0 +1,94 @@
+{
+  "name": {
+    "en": "Déjà Vu by Audriana",
+    "fr": "Déjà-Vu par Audriana"
+  },
+  "short_name": "Déjà Vu",
+  "description": {
+    "en": "A captivating tale of love that transcends time, weaving together past lives and present moments in an unforgettable journey through New York and Paris.",
+    "fr": "Un récit captivant d'amour qui transcende le temps, entrelaçant vies passées et moments présents dans un voyage inoubliable entre New York et Paris."
+  },
+  "categories": ["books", "literature", "romance"],
+  "start_url": {
+    "en": "/?source=pwa&lang=en",
+    "fr": "/?source=pwa&lang=fr"
+  },
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/book-preview.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": {
+        "en": "Book Preview",
+        "fr": "Aperçu du Livre"
+      }
+    }
+  ],
+  "shortcuts": {
+    "en": [
+      {
+        "name": "Purchase Book",
+        "url": "/#purchase",
+        "description": "Buy Déjà Vu"
+      },
+      {
+        "name": "Read Reviews",
+        "url": "/#reviews",
+        "description": "See what readers are saying"
+      }
+    ],
+    "fr": [
+      {
+        "name": "Acheter le Livre",
+        "url": "/#purchase",
+        "description": "Acheter Déjà-Vu"
+      },
+      {
+        "name": "Lire les Avis",
+        "url": "/#reviews",
+        "description": "Découvrir ce que disent les lecteurs"
+      }
+    ]
+  },
+  "lang": ["en", "fr"],
+  "dir": "ltr",
+  "default_locale": "en",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "iarc_rating_id": "",
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

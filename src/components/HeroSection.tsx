@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { Reviews } from "@/components/Reviews";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
+import { Link } from "react-router-dom";
 import {
   Carousel,
   CarouselContent,
@@ -21,11 +22,13 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
   const { t } = useLanguage();
   
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12">
-      <LanguageSelector />
+    <section className="relative min-h-[100svh] flex flex-col justify-center" aria-label="Hero Section">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12" itemScope itemType="https://schema.org/Book">
+      <div className="flex justify-end items-center mb-4">
+        <LanguageSelector />
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-stretch w-full h-full" role="banner">
-        <div className="block lg:hidden w-full">
+        <div className="block lg:hidden w-full" aria-label="Mobile Book Cover Carousel">
           <Carousel 
             className="w-full"
             opts={{
@@ -48,8 +51,15 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/deja-vu-book-cover.jpg"
-                    alt="Déjà Vu Book Cover - English Edition"
+                    alt="Déjà Vu Book Cover - English Edition" 
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -58,7 +68,13 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                   <img
                     src="/images/deja-vu-french-book-cover.jpg"
                     alt="Déjà Vu Book Cover - French Edition"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -67,7 +83,13 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                   <img
                     src="/images/deja-vu-book-cover.jpg"
                     alt="Déjà Vu Book Cover - Special Edition"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -75,10 +97,10 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
           </Carousel>
         </div>
         <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8 max-w-xl mx-auto lg:mx-0 w-full order-first lg:row-span-2 flex flex-col">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-tiltwarp font-bold gradient-text animate-fadeIn text-center lg:text-left" aria-label={t('hero', 'title')}>
-            {t('hero', 'title')}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-tiltwarp font-bold gradient-text animate-fadeIn text-center lg:text-left" itemProp="name">
+            <span aria-label={t('hero', 'title')}>{t('hero', 'title')}</span>
           </h1>
-          <div className="text-base sm:text-lg md:text-xl text-black/80 animate-fadeIn min-h-[4em] sm:min-h-[3em] text-center lg:text-left px-4 sm:px-6 lg:px-0">
+          <div className="text-base sm:text-lg md:text-xl text-black/80 animate-fadeIn min-h-[4em] sm:min-h-[3em] text-center lg:text-left px-4 sm:px-6 lg:px-0" itemProp="description">
             <div key={t('hero', 'subtitle')}>
               <Typewriter
                 onInit={(typewriter) => {
@@ -98,6 +120,10 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
             className="w-auto bg-primary text-white hover:bg-primary/90 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 animate-fadeIn font-tiltwarp uppercase flex justify-center mx-auto lg:ml-0"
             onClick={scrollToPurchase}
             aria-label={t('hero', 'buyButton')}
+            role="button"
+            itemProp="offers"
+            itemScope
+            itemType="https://schema.org/Offer"
           >
             {t('hero', 'buyButton')}
           </Button>
@@ -129,7 +155,14 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                   <img
                     src="/images/deja-vu-book-cover.jpg"
                     alt="Déjà Vu Book Cover - English Edition"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -138,7 +171,13 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                   <img
                     src="/images/deja-vu-french-book-cover.jpg"
                     alt="Déjà Vu Book Cover - French Edition"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
@@ -147,7 +186,13 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
                   <img
                     src="/images/deja-vu-book-cover.jpg"
                     alt="Déjà Vu Book Cover - Special Edition"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="1200"
+                    itemProp="image"
                     className="rounded-lg shadow-xl object-cover w-full h-full"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </CarouselItem>
