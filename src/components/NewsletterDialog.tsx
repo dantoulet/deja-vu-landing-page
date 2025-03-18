@@ -24,7 +24,7 @@ export const NewsletterDialog = () => {
             {newsletter.title}
           </DialogTitle>
         </DialogHeader>
-        <Newsletter hideTitle />
+        <Newsletter hideTitle onClose={onClose} />
       </DialogContent>
     </Dialog>
   );

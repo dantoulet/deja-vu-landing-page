@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English Homepage -->
+  <url>
+    <loc>https://dejavu-book.com/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr"/>
+  </url>
+  
+  <!-- French Homepage -->
+  <url>
+    <loc>https://dejavu-book.com/fr</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/"/>
+  </url>
+
+  <!-- Author Page -->
+  <url>
+    <loc>https://dejavu-book.com/author</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/author"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr/author"/>
+  </url>
+
+  <!-- French Author Page -->
+  <url>
+    <loc>https://dejavu-book.com/fr/author</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr/author"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/author"/>
+  </url>
+</urlset>

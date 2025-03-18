@@ -1,0 +1,38 @@
+# Global rules for all robots
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /images/
+
+# Crawl delay for rate limiting
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://dejavu-book.com/sitemap.xml
+
+# Host directive to specify preferred domain
+Host: dejavu-book.com
