@@ -40,6 +40,10 @@ export const Reviews = () => {
           itemID={`review-${index}`}
           role="article"
         >
+          <div itemScope itemType="https://schema.org/Book" itemProp="itemReviewed">
+            <meta itemProp="name" content="Déjà Vu" />
+            <meta itemProp="author" content="Audriana Cristello" />
+          </div>
           <div className="flex flex-col h-full">
             <div className="mb-4" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
               <meta itemProp="bestRating" content="5" />
