@@ -32,7 +32,7 @@ Allow: /images/
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://dejavu-book.com/sitemap.xml
+Sitemap: https://audrianacristello.com/sitemap.xml
 
 # Host directive to specify preferred domain
-Host: dejavu-book.com
+Host: audrianacristello.com

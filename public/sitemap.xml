@@ -3,41 +3,41 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- English Homepage -->
   <url>
-    <loc>https://dejavu-book.com/</loc>
+    <loc>https://audrianacristello.com/</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audrianacristello.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://audrianacristello.com/fr"/>
   </url>
   
   <!-- French Homepage -->
   <url>
-    <loc>https://dejavu-book.com/fr</loc>
+    <loc>https://audrianacristello.com/fr</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://audrianacristello.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audrianacristello.com/"/>
   </url>
 
   <!-- Author Page -->
   <url>
-    <loc>https://dejavu-book.com/author</loc>
+    <loc>https://audrianacristello.com/author</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/author"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr/author"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audrianacristello.com/author"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://audrianacristello.com/fr/author"/>
   </url>
 
   <!-- French Author Page -->
   <url>
-    <loc>https://dejavu-book.com/fr/author</loc>
+    <loc>https://audrianacristello.com/fr/author</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dejavu-book.com/fr/author"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dejavu-book.com/author"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://audrianacristello.com/fr/author"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://audrianacristello.com/author"/>
   </url>
 </urlset>
