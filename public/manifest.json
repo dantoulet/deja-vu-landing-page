@@ -40,9 +40,9 @@
   ],
   "screenshots": [
     {
-      "src": "/screenshots/book-preview.jpg",
+      "src": "/screenshots/book-preview.webp",
       "sizes": "1280x720",
-      "type": "image/jpeg",
+      "type": "image/webp",
       "platform": "wide",
       "label": {
         "en": "Book Preview",

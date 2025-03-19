@@ -48,7 +48,7 @@ section {
 
 body {
   @apply bg-white text-primary font-times;
-  background-image: url('/images/background-texture.png');
+  background-image: url('/images/background-texture.webp');
   background-repeat: repeat;
   background-size: 400px auto;
   background-attachment: fixed;

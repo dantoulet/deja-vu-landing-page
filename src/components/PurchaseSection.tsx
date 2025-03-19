@@ -9,7 +9,7 @@ export const PurchaseSection = () => {
         <div className="w-full flex justify-center animate-fadeIn">
           <div className="w-full max-w-[260px] xs:max-w-[280px] sm:max-w-[320px] md:max-w-[400px]">
             <img
-              src={language === 'fr' ? '/images/deja-vu-french-book-cover.jpg' : '/images/deja-vu-book-cover.jpg'}
+              src={language === 'fr' ? '/images/deja-vu-french-book-cover.webp' : '/images/deja-vu-book-cover.webp'}
               alt={language === 'fr' ? 'Couverture du livre Déjà Vu' : 'Déjà Vu Book Cover'}
               itemProp="image"
               className="w-full h-auto shadow-2xl rounded transition-transform hover:scale-105 duration-300"

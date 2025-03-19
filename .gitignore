@@ -1,5 +1,7 @@
 node_modules/
 # Only ignore images in these directories
+node_modules/**/*.webp
 node_modules/**/*.jpg
+node_modules/**/*.jpeg
 node_modules/**/*.png
 .DS_Store

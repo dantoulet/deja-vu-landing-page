@@ -50,7 +50,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-book-cover.jpg"
+                    src="/images/deja-vu-book-cover.webp"
                     alt="Déjà Vu Book Cover - English Edition" 
                     loading="eager"
                     fetchPriority="high"
@@ -66,7 +66,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-french-book-cover.jpg"
+                    src="/images/deja-vu-french-book-cover.webp"
                     alt="Déjà Vu Book Cover - French Edition"
                     loading="lazy"
                     decoding="async"
@@ -81,7 +81,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-book-cover.jpg"
+                    src="/images/deja-vu-book-cover.webp"
                     alt="Déjà Vu Book Cover - Special Edition"
                     loading="lazy"
                     decoding="async"
@@ -96,7 +96,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
             </CarouselContent>
           </Carousel>
         </div>
-        <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8 max-w-xl mx-auto lg:mx-0 w-full order-first lg:row-span-2 flex flex-col">
+        <div className="text-left space-y-4 sm:space-y-4 lg:space-y-4 max-w-xl mx-auto lg:mx-0 w-full order-first lg:row-span-2 flex flex-col">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-tiltwarp font-bold gradient-text animate-fadeIn text-center lg:text-left" itemProp="name">
             <span aria-label={t('hero', 'title')}>{t('hero', 'title')}</span>
           </h1>
@@ -153,7 +153,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-book-cover.jpg"
+                    src="/images/deja-vu-book-cover.webp"
                     alt="Déjà Vu Book Cover - English Edition"
                     loading="eager"
                     fetchPriority="high"
@@ -169,7 +169,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-french-book-cover.jpg"
+                    src="/images/deja-vu-french-book-cover.webp"
                     alt="Déjà Vu Book Cover - French Edition"
                     loading="lazy"
                     decoding="async"
@@ -184,7 +184,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-book-cover.jpg"
+                    src="/images/deja-vu-book-cover.webp"
                     alt="Déjà Vu Book Cover - Special Edition"
                     loading="lazy"
                     decoding="async"
