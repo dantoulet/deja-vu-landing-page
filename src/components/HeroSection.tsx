@@ -50,7 +50,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-book-cover.webp"
+                    src="/images/deja-vu-book-cover.webp?w=800&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - English Edition" 
                     loading="eager"
                     fetchPriority="high"
@@ -66,7 +66,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-french-book-cover.webp"
+                    src="/images/deja-vu-french-book-cover.webp?w=800&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - French Edition"
                     loading="lazy"
                     decoding="async"
@@ -81,7 +81,7 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="aspect-[4/3] md:aspect-[16/9]">
                   <img
-                    src="/images/deja-vu-book-cover.webp"
+                    src="/images/deja-vu-book-cover.webp?w=800&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - Special Edition"
                     loading="lazy"
                     decoding="async"
@@ -153,10 +153,11 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-book-cover.webp"
+                    src="/images/deja-vu-book-cover.webp?w=1600&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - English Edition"
                     loading="eager"
                     fetchPriority="high"
+                    srcSet="/images/deja-vu-book-cover.webp?w=800&format=webp&quality=80 800w, /images/deja-vu-book-cover.webp?w=1200&format=webp&quality=80 1200w, /images/deja-vu-book-cover.webp?w=1600&format=webp&quality=80 1600w"
                     decoding="async"
                     width="800"
                     height="1200"
@@ -169,9 +170,10 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-french-book-cover.webp"
+                    src="/images/deja-vu-french-book-cover.webp?w=1600&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - French Edition"
                     loading="lazy"
+                    srcSet="/images/deja-vu-french-book-cover.webp?w=800&format=webp&quality=80 800w, /images/deja-vu-french-book-cover.webp?w=1200&format=webp&quality=80 1200w, /images/deja-vu-french-book-cover.webp?w=1600&format=webp&quality=80 1600w"
                     decoding="async"
                     width="800"
                     height="1200"
@@ -184,9 +186,10 @@ export const HeroSection = ({ showHeroChevron, scrollToStory, scrollToPurchase }
               <CarouselItem>
                 <div className="h-full max-h-[700px] flex items-center justify-center">
                   <img
-                    src="/images/deja-vu-book-cover.webp"
+                    src="/images/deja-vu-book-cover.webp?w=1600&format=webp&quality=80"
                     alt="Déjà Vu Book Cover - Special Edition"
                     loading="lazy"
+                    srcSet="/images/deja-vu-book-cover.webp?w=800&format=webp&quality=80 800w, /images/deja-vu-book-cover.webp?w=1200&format=webp&quality=80 1200w, /images/deja-vu-book-cover.webp?w=1600&format=webp&quality=80 1600w"
                     decoding="async"
                     width="800"
                     height="1200"

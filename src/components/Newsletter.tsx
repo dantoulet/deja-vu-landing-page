@@ -26,16 +26,20 @@ export const Newsletter = ({ hideTitle = false, onClose }: { hideTitle?: boolean
       
       // Always show success since we can't read the response in no-cors mode
       toast({
-          title: newsletter.toast.title,
-          description: newsletter.toast.description,
-        });
-        form.reset();
-        onClose?.();
+        title: newsletter.toast.title,
+        description: newsletter.toast.description,
+        duration: 3000, // 3 seconds
+      });
+      // Store subscription status
+      localStorage.setItem('newsletter-subscribed', 'true');
+      form.reset();
+      onClose?.();
     } catch (error) {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
         variant: "destructive",
+        duration: 3000, // 3 seconds
       });
     } finally {
       setSubmitting(false);
@@ -43,25 +47,25 @@ export const Newsletter = ({ hideTitle = false, onClose }: { hideTitle?: boolean
   };
 
   return (
-    <div className="sm:mb-36 md:mb-16 w-full max-w-md mx-auto animate-fadeIn">
+    <div className="w-full max-w-lg mx-auto animate-fadeIn">
       {!hideTitle && (
-        <div className="mb-12 sm:mb-6">
-          <h3 className="text-2xl font-tiltwarp text-primary uppercase text-center">
+        <div className="mb-2">
+          <h3 className="text-2xl font-tiltwarp text-primary uppercase text-left">
             {newsletter.title}
           </h3>
         </div>
       )}
-      <p className="text-black/80 font-times text-center mb-8 sm:mb-4 px-4 sm:px-6 lg:px-0">
+      <p className="text-black/80 font-times text-left mb-2 sm:mb-1">
         {newsletter.description}
       </p>
-      <form onSubmit={handleSubmit} className="listmonk-form space-y-4">
+      <form onSubmit={handleSubmit} className="listmonk-form">
         <input type="hidden" name="nonce" />
         <input type="hidden" name="l" value="6a71a4b9-70a7-46da-8a3f-a8224cb80808" />
         <input
           type="email"
           name="email"
           placeholder={newsletter.placeholder}
-          className="bg-white/10 border-primary/20 font-times text-black placeholder:text-black/60 w-full px-3 py-2 border rounded-md"
+          className="bg-white/10 border-primary/20 font-times text-black placeholder:text-black/60 w-full px-3 py-2 border rounded-md mb-3"
           required
         />
         <button 

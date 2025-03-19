@@ -7,7 +7,7 @@ interface StorySectionProps {
   scrollToAuthor: () => void;
 }
 
-export const StorySection = ({ showStoryChevron, scrollToAuthor }: StorySectionProps) => {
+const StorySection = ({ showStoryChevron, scrollToAuthor }: StorySectionProps) => {
   const { t } = useLanguage();
   const storyRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +40,7 @@ export const StorySection = ({ showStoryChevron, scrollToAuthor }: StorySectionP
   return (
     <section id="story-section" className="container mx-auto min-h-screen relative flex items-center px-3 sm:px-4 md:px-6">
       <div ref={storyRef} className="max-w-3xl mx-auto text-center space-y-3 sm:space-y-4 md:space-y-6 mb-12 story-content">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-tiltwarp mb-2 sm:mb-10 text-primary uppercase">{t('story', 'title')}</h2>
+        <h2 className="text-3xl font-tiltwarp mb-2 sm:mb-10 text-primary uppercase">{t('story', 'title')}</h2>
         <div className="text-base sm:text-lg md:text-md text-black/80 space-y-3 sm:space-y-4 text-justify max-w-2xl mx-auto leading-relaxed px-4 sm:px-6 lg:px-0">
           {t<string[]>('story', 'content').map((paragraph, index) => (
             <p 
@@ -64,4 +64,6 @@ export const StorySection = ({ showStoryChevron, scrollToAuthor }: StorySectionP
       )}
     </section>
   );
-}
+};
+
+export default StorySection;

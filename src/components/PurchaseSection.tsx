@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export const PurchaseSection = () => {
+const PurchaseSection = () => {
   const { t, language } = useLanguage();
   
   return (
@@ -17,7 +17,7 @@ export const PurchaseSection = () => {
           </div>
         </div>
         <div className="text-left space-y-4 sm:space-y-6 lg:space-y-8 animate-fadeIn">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-tiltwarp mb-2 sm:mb-4 text-primary uppercase" itemProp="name">
+          <h2 className="text-2xl font-tiltwarp mb-2 sm:mb-4 text-primary uppercase" itemProp="name">
             {t('purchase', 'title')}
           </h2>
           <p className="text-base sm:text-lg text-black/80 leading-relaxed px-4 sm:px-6 lg:px-0" itemProp="description">
@@ -28,7 +28,7 @@ export const PurchaseSection = () => {
               href="#" // TODO: Add Amazon link
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 sm:gap-3 w-full bg-[#FF9900] text-white py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold font-tiltwarp uppercase hover:bg-[#FF9900]/90 transition-all hover:scale-[1.02]"
+              className="flex items-center justify-center gap-2 sm:gap-3 w-full bg-[#E68A00] text-white py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg text-sm sm:text-base font-semibold font-tiltwarp uppercase hover:bg-[#E68A00]/90 transition-all hover:scale-[1.02]"
               aria-label={`${t('purchase', 'platforms.amazon')} - ${t('purchase', 'title')}`}
               itemProp="offers" itemScope itemType="https://schema.org/Offer"
             >
@@ -63,3 +63,5 @@ export const PurchaseSection = () => {
     </section>
   );
 };
+
+export default PurchaseSection;

@@ -18,7 +18,12 @@ export const LanguageSelector = () => {
     <div className="fixed top-6 right-6 z-50">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="h-8 w-8 transition-opacity hover:opacity-70">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-8 w-8 transition-opacity hover:opacity-70"
+            aria-label={t('nav', 'language')}
+          >
             <Globe className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>

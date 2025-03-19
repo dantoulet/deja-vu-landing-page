@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { HeroSection } from "@/components/HeroSection";
-import { StorySection } from "@/components/StorySection";
-import { AuthorSection } from "@/components/AuthorSection";
-import { PurchaseSection } from "@/components/PurchaseSection";
 import { NewsletterDialog } from "@/components/NewsletterDialog";
+
+const StorySection = lazy(() => import("@/components/StorySection"));
+const AuthorSection = lazy(() => import("@/components/AuthorSection"));
+const PurchaseSection = lazy(() => import("@/components/PurchaseSection"));
 
 const Index = () => {
   const [showHeroChevron, setShowHeroChevron] = useState(true);
@@ -104,11 +105,17 @@ const Index = () => {
         <HeroSection showHeroChevron={showHeroChevron} scrollToStory={scrollToStory} scrollToPurchase={scrollToPurchase} />
       </header>
       <main>
-        <StorySection showStoryChevron={showStoryChevron} scrollToAuthor={scrollToAuthor} />
-        <AuthorSection showAuthorChevron={showAuthorChevron} scrollToPurchase={scrollToPurchase} />
+        <Suspense fallback={<div className="min-h-screen"></div>}>
+          <StorySection showStoryChevron={showStoryChevron} scrollToAuthor={scrollToAuthor} />
+        </Suspense>
+        <Suspense fallback={<div className="min-h-screen"></div>}>
+          <AuthorSection showAuthorChevron={showAuthorChevron} scrollToPurchase={scrollToPurchase} />
+        </Suspense>
       </main>
       <footer>
-        <PurchaseSection />
+        <Suspense fallback={<div className="min-h-screen"></div>}>
+          <PurchaseSection />
+        </Suspense>
       </footer>
     </div>
   );

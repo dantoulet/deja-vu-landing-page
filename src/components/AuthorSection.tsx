@@ -8,7 +8,7 @@ interface AuthorSectionProps {
   scrollToPurchase: () => void;
 }
 
-export const AuthorSection = ({ showAuthorChevron, scrollToPurchase }: AuthorSectionProps) => {
+const AuthorSection = ({ showAuthorChevron, scrollToPurchase }: AuthorSectionProps) => {
   const { t } = useLanguage();
 
   // Handle Instagram embed
@@ -41,16 +41,41 @@ export const AuthorSection = ({ showAuthorChevron, scrollToPurchase }: AuthorSec
 
     // Start observing the Instagram embed container
     const container = document.querySelector('.instagram-media');
+    let iframeObserver: MutationObserver | null = null;
+    
     if (container) {
       observer.observe(container, {
+        childList: true,
+        subtree: true
+      });
+
+      // Add title to Instagram iframe when it's created
+      const addTitleToIframe = () => {
+        const iframe = container.querySelector('iframe');
+        if (iframe && !iframe.hasAttribute('title')) {
+          iframe.setAttribute('title', 'Audriana Cherie Instagram Feed');
+        }
+      };
+
+      // Initial check
+      addTitleToIframe();
+
+      // Also check whenever mutations occur
+      iframeObserver = new MutationObserver(addTitleToIframe);
+      iframeObserver.observe(container, {
         childList: true,
         subtree: true
       });
     }
 
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
       observer.disconnect();
+      if (iframeObserver) {
+        iframeObserver.disconnect();
+      }
     };
   }, []);
 
@@ -143,7 +168,7 @@ export const AuthorSection = ({ showAuthorChevron, scrollToPurchase }: AuthorSec
 
         <div className="text-center lg:text-left h-full flex flex-col justify-between animate-fadeIn pt-4 sm:pt-6 lg:pt-0">
           <div className="space-y-4 sm:space-y-6 flex flex-col items-center lg:items-start">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-tiltwarp mb-2 sm:mb-4 text-primary uppercase text-center lg:text-left">{t('author', 'title')}</h2>
+            <h2 className="text-2xl font-tiltwarp sm:mb-2 text-primary uppercase text-center lg:text-left">{t('author', 'title')}</h2>
             <p className="text-base sm:text-lg text-black/80 leading-relaxed text-justify px-4 sm:px-6 lg:px-0">
               {t('author', 'description')}
             </p>
@@ -255,3 +280,5 @@ export const AuthorSection = ({ showAuthorChevron, scrollToPurchase }: AuthorSec
     </section>
   );
 };
+
+export default AuthorSection;

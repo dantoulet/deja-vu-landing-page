@@ -34,7 +34,22 @@
     <meta name="twitter:image" content="/images/deja-vu-book-cover.webp" />
     
     <link rel="canonical" href="https://audrianacristello.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
+    <!-- Preload Google Fonts CSS -->
+    <link rel="preload" 
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" />
+    
+    <!-- Load Google Fonts with display=swap -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+          media="print"
+          onload="this.media='all'" />
+    
+    <!-- Fallback if JavaScript is disabled -->
+    <noscript>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" />
+    </noscript>
     
     <!-- Preload Critical Resources -->
     <link rel="preload" as="image" href="/images/deja-vu-book-cover.webp" />
@@ -136,8 +151,13 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <script type="module" crossorigin src="/assets/index-CnD7BPSY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DhYLsX2Q.css">
+    <script type="module" crossorigin src="/assets/index-CbhvfChq.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-core-4HP1EGEp.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-CjSK8VtQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-ui-u8Axy7qB.js">
+    <link rel="modulepreload" crossorigin href="/assets/features-womCLaXk.js">
+    <link rel="modulepreload" crossorigin href="/assets/layout-BCUclGoG.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BxFah-dX.css">
   </head>
   <body>
     <div id="root"></div>

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCookieConsent } from '@/contexts/CookieConsentContext';
 
-const NEWSLETTER_POPUP_KEY = 'newsletter-last-shown';
-const ONE_DAY_MS = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+const NEWSLETTER_SUBSCRIBED_KEY = 'newsletter-subscribed';
 
 export const useNewsletterPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,28 +9,17 @@ export const useNewsletterPopup = () => {
 
   useEffect(() => {
     if (!consent) return;
-    const lastShown = localStorage.getItem(NEWSLETTER_POPUP_KEY);
     
-    if (!lastShown) {
-      // First visit
+    const isSubscribed = localStorage.getItem(NEWSLETTER_SUBSCRIBED_KEY) === 'true';
+    if (!isSubscribed) {
       setIsOpen(true);
-      if (consent) {
-        localStorage.setItem(NEWSLETTER_POPUP_KEY, Date.now().toString());
-      }
-    } else {
-      const lastShownDate = parseInt(lastShown);
-      const now = Date.now();
-      
-      if (now - lastShownDate >= ONE_DAY_MS) {
-        // More than a day has passed
-        setIsOpen(true);
-        localStorage.setItem(NEWSLETTER_POPUP_KEY, now.toString());
-      }
     }
-  }, []);
+  }, [consent]);
 
   const onClose = () => {
     setIsOpen(false);
+    // Store subscription status when closed after successful subscription
+    localStorage.setItem(NEWSLETTER_SUBSCRIBED_KEY, 'true');
   };
 
   return {

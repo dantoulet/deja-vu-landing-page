@@ -7,9 +7,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Terms from "./pages/Terms";
-import CookiePolicy from "./pages/CookiePolicy";
 import Layout from "./components/Layout";
+import { lazy, Suspense } from "react";
+
+const Terms = lazy(() => import("./pages/Terms"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 
 const queryClient = new QueryClient();
 
@@ -24,8 +26,8 @@ const App = () => (
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/terms" element={<Suspense fallback={<div>Loading...</div>}><Terms /></Suspense>} />
+              <Route path="/cookie-policy" element={<Suspense fallback={<div>Loading...</div>}><CookiePolicy /></Suspense>} />
             </Routes>
           </Layout>
         </BrowserRouter>
